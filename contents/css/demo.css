@@ -46,6 +46,10 @@ body, ul {
 .camera-dock li.on {
 	opacity: 1;
 }
+.camera-dock li img {
+	width: 100%;
+	height: 100%;
+}
 .camera-dot-dock {
 	background: transparent;
 	top: 0;
