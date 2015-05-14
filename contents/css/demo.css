@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+body, ul {
+	margin: 0;
+	padding: 0;
+}
+
+.camera-wrap {
+	width: 600px;
+	height: 400px;
+	position: relative;
+	z-index: 100;
+	overflow: hidden;
+}
+.branch-camera-wrap {
+	height: 100%;
+	margin: 0
+}
+.camera-dock {
+	position: absolute;
+	bottom: 0;
+	z-index: 150;
+	width: 100%;
+	height: 62px;
+	background-color: #d8d8d8;
+	background-color: rgba(216, 216, 216, 0.9);
+	text-align: center;
+	overflow: hidden;
+}
+.camera-dock li {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	margin: 10px 5px;
+	border: 1px solid #fff;
+	border-radius: 100%;
+	vertical-align: middle;
+	cursor: pointer;
+	opacity: .3;
+	position: relative;
+	-webkit-transition: opacity .4s ease, width .4s ease, height .4s ease;
+	transition: opacity .4s ease, width .4s ease, height .4s ease;
+}
+.camera-dock li:hover,
+.camera-dock li.on {
+	opacity: 1;
+}
+.camera-dot-dock {
+	background: transparent;
+	top: 0;
+	left: 0;
+	right: 8px;
+	width: auto;
+	height: 30px;
+	padding: 5px;
+	text-align: right;
+}
+.camera-dot-dock li {
+	width: 8px;
+	height: 8px;
+	background: #eee;
+	border-radius: 100%;
+}
+
+.camera-body {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	overflow: hidden;
+	background-color: #000;
+}
+.camera-body > div {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	display: none;
+	background-size: cover;
+	background-position: center;
+}
+.camera-body > div img {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	margin: 0 auto;
+}
+.camera-over {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	opacity: .2;
+	color: #fff;
+	background-image: url('../img/patterns/overlay2.png');
+}
+.camera-body > div p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #000;
+	background: rgba(0, 0, 0, .3);
+	color: #fff;
+	text-transform: capitalize;
+	padding: 5px;
+	margin: 0;
+}
+.camera-btn span {
+	display: block;
+	position: absolute;
+	top: 50%;
+	width: 30px;
+	height: 45px;
+	margin: -23px 0;
+	background: #000 url('../img/minCameraBtn.png') no-repeat -1px 7px;
+	background: rgba(0, 0, 0, .3) url('../img/minCameraBtn.png') no-repeat -1px 7px;
+	z-index: 100;
+	opacity: 0;
+	cursor: pointer;
+}
+.c-prev-btn {
+	transform: translateX(-35px);
+}
+
+.camera-btn .c-next-btn {
+	right: 0;
+	background-position: -51px 7px;
+	transform: translateX(35px);
+}
+.camera-btn-in .c-next-btn,
+.camera-btn-in .c-prev-btn {
+	transition: all .6s ease;
+	opacity: 1;
+	transform: translateX(0);
+}
