@@ -5,12 +5,21 @@ body, ul {
 	padding: 0;
 }
 
+body {
+	background-color: #000;
+}
+/* 主样式 */
+
 .camera-wrap {
 	width: 600px;
 	height: 400px;
 	position: relative;
 	z-index: 100;
 	overflow: hidden;
+	margin: -200px -300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
 }
 .branch-camera-wrap {
 	height: 100%;
