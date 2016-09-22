@@ -111,7 +111,7 @@ body {
 	z-index: 100;
 	opacity: .2;
 	color: #fff;
-	background-image: url('../img/patterns/overlay2.png');
+	background-image: url('../img/slide/patterns/overlay2.png');
 }
 .camera-body > div p {
 	position: absolute;
@@ -132,8 +132,8 @@ body {
 	width: 30px;
 	height: 45px;
 	margin: -23px 0;
-	background: #000 url('../img/minCameraBtn.png') no-repeat -1px 7px;
-	background: rgba(0, 0, 0, .3) url('../img/minCameraBtn.png') no-repeat -1px 7px;
+	background: #000 url('../img/slide/minCameraBtn.png') no-repeat -1px 7px;
+	background: rgba(0, 0, 0, .3) url('../img/slide/minCameraBtn.png') no-repeat -1px 7px;
 	z-index: 100;
 	opacity: 0;
 	cursor: pointer;
