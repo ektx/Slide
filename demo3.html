@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>背景图片</title>
+</head>
+<body>
+	<div class="camera-wrap">
+		<div class="camera-body">
+			<a href="#" class="hot-pic">1</a>
+			<a href="#" class="hot-pic">2</a>
+			<a href="#" class="hot-pic">3</a>
+			<a href="#" class="hot-pic">4</a>
+		</div>
+		
+		<div class="camera-dock camera-dot-dock"></div>
+
+		<div class="camera-btn">
+			<span class="c-prev-btn"></span>
+			<span class="c-next-btn"></span>
+		</div>
+
+	</div>
+</body>
+<script type="text/javascript" src="contents/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="contents/js/slider.js"></script>
+<script>
+	let setNewsImg = function(index) {
+    	var _displayBox = $('.swiper-display-box');
+	    var _current = _displayBox.find('.current');
+	    var size = _displayBox.find('img').length - 1;
+	    var index = index || _current.index();
+
+    	_current.removeClass();
+
+	    index = index < size ? index+1 : 0;
+
+	    _displayBox.find('img').eq(index).addClass('current');
+    	
+    }
+
+	var autoNewsPlay;
+	function autoNewsPlayFun () {
+	    autoNewsPlay = setTimeout(function () {
+	    	setNewsImg();
+	    	autoNewsPlayFun()
+	    }, 4000);
+	}
+
+	autoNewsPlayFun()
+
+    $('li', '.swiper-page').hover(function() {
+    	clearTimeout(autoNewsPlay);
+
+    	setNewsImg( $(this).index() -1 )
+    }, autoNewsPlayFun)
+</script>
+</html>
