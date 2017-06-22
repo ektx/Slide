@@ -3,17 +3,43 @@
 <head>
 	<meta charset="utf-8">
 	<title>背景图片</title>
+	<style>
+		body, div, a {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			height: 100vh;
+			width: 100vw;
+		}
+		
+		.swiper-inner,
+		.swiper-body,
+		.swiper-box {
+			width: 100%;
+			height: 100%;
+		}
+
+
+		.swiper-inner {
+			display: block;
+			text-align: center;
+		}
+
+
+	</style>
 </head>
 <body>
-	<div class="camera-wrap">
-		<div class="camera-body">
-			<a href="#" class="hot-pic">1</a>
-			<a href="#" class="hot-pic">2</a>
-			<a href="#" class="hot-pic">3</a>
-			<a href="#" class="hot-pic">4</a>
+	<div class="swiper-box">
+		<div class="swiper-body">
+			<a class="swiper-inner" href="#" class="hot-pic">1</a>
+			<a class="swiper-inner" href="#" class="hot-pic">2</a>
+			<a class="swiper-inner" href="#" class="hot-pic">3</a>
+			<a class="swiper-inner" href="#" class="hot-pic">4</a>
 		</div>
 		
-		<div class="camera-dock camera-dot-dock"></div>
+		<div class="swiper-dock-box"></div>
 
 		<div class="camera-btn">
 			<span class="c-prev-btn"></span>
@@ -23,7 +49,6 @@
 	</div>
 </body>
 <script type="text/javascript" src="contents/js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="contents/js/slider.js"></script>
 <script>
 	let setNewsImg = function(index) {
     	var _displayBox = $('.swiper-display-box');
